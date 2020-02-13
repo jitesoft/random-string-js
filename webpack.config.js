@@ -1,9 +1,9 @@
 const Path = require('path');
 
-module.exports = {
+const shared = {
   mode: process.env.NODE_ENV,
   optimization: {
-    minimize: process.env.NODE_ENV === 'production'
+    minimize: process.env.NODE_ENV === 'production',
   },
   module: {
     rules: [
@@ -13,16 +13,31 @@ module.exports = {
         loader: 'babel-loader'
       }
     ]
-  },
-  entry: {
-    index: [
-      Path.join(__dirname, 'src', 'index.js')
-    ]
-  },
+  }
+};
+
+const web = Object.assign({}, shared, {
+  target: 'web',
+  entry: Path.join(__dirname, 'src', 'Web', 'index.js'),
   output: {
-    filename: 'index.js',
-    library: '@jitesoft/rand',
+    filename: 'index.web.js',
+    library: '@jitesoft/random-string',
     libraryTarget: 'umd',
     globalObject: 'this'
   }
-};
+});
+
+const node = Object.assign({}, shared, {
+  target: 'node',
+  entry: Path.join(__dirname, 'src', 'Node', 'index.js'),
+  output: {
+    filename: 'index.node.js',
+    library: '@jitesoft/random-string',
+    libraryTarget: 'umd'
+  }
+});
+
+module.exports = [
+  web,
+  node
+];

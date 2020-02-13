@@ -27,7 +27,6 @@ export default class Generator {
     return this.getRandom(len).map(i => (Math.round(i % 10) + 48));
   }
 
-
   /**
    * Fetch a list of random char codes of special characters.
    *
