@@ -2,7 +2,7 @@
   "name": "@jitesoft/random-string",
   "version": "1.0.0",
   "description": "Cross environment random string generator.",
-  "main": "dist/index.js",
+  "main": "dist/index.node.js",
   "browser": "dist/index.web.js",
   "esnext": {
     "main": "src/Node/index.js",
