@@ -1,7 +1,4 @@
-import { randomBytes } from "crypto";
-
 export default class Generator {
-
   /**
    * @internal
    * @abstract
