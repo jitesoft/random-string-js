@@ -4,7 +4,7 @@ export const shuffle = (list) => {
   let temp = null;
   let rI = null;
 
-  while (0 !== i) {
+  while (i !== 0) {
     rI = Math.floor(Math.random() * i);
     i--;
     temp = copy[i];

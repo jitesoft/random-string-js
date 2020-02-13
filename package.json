@@ -4,6 +4,10 @@
   "description": "Cross environment random string generator.",
   "main": "dist/index.js",
   "browser": "dist/index.web.js",
+  "esnext": {
+    "main": "src/Node/index.js",
+    "browser": "src/Web/index.js"
+  },
   "scripts": {
     "test": "eslint src/ && jest",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js"
@@ -15,6 +19,12 @@
     "node",
     "random string"
   ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text"
+    ]
+  },
   "author": "Johannes Tegnér <johannes@jitesoft.com>",
   "license": "MIT",
   "devDependencies": {
