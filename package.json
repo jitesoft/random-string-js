@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "eslint src/ && jest",
-    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js"
   },
   "keywords": [
     "random",
@@ -25,7 +26,19 @@
       "text"
     ]
   },
-  "author": "Johannes Tegnér <johannes@jitesoft.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jitesoft/random-string-js"
+  },
+  "bugs": {
+    "email": "sec@jitesoft.com",
+    "url": "https://github.com/jitesoft/random-string-js/issues"
+  },
+  "author": {
+    "email": "johannes@jitesoft.com",
+    "name": "Johannes Tegnér",
+    "url": "https://jitesoft.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.8.4",
