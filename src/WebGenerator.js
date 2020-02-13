@@ -10,8 +10,8 @@ export default class WebGenerator extends Generator {
     }
 
     // Fallback to random if no crypto on window.
-    for (let i = 0; i < len; i++) {
-      list[i] = Math.random();
+    for (let i = len; i-- > 0;) {
+      list[i] = Math.floor(Math.random() * 256.0);
     }
 
     return list;

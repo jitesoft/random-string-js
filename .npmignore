@@ -4,4 +4,4 @@
 .eslintrc.json
 webpack.config.js
 .github
-tests
+test
