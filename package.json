@@ -24,6 +24,9 @@
     "collectCoverage": true,
     "coverageReporters": [
       "text"
+    ],
+    "reporters": [
+      "jest-junit"
     ]
   },
   "repository": {
@@ -52,6 +55,7 @@
     "eslint": "^7.7.0",
     "jest": "^26.4.2",
     "webpack": "^5.0.0-beta.28",
-    "webpack-cli": "^4.0.0-beta.8"
+    "webpack-cli": "^4.0.0-beta.8",
+    "jest-junit": "^11.1.0"
   }
 }
