@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import WebGenerator from '../src/WebGenerator';
 
 const generator = new WebGenerator();
@@ -34,11 +37,11 @@ describe('Tests for web generator.', () => {
   });
 
   test('Uses crypt of it exists.', () => {
-    Object.defineProperty(global, 'crypto', {
-      value: {
-        getRandomValues: (a) => a.fill(1).values()
+    window.crypto = {
+      getRandomValues (array) {
+        array = array.fill(1).values();
       }
-    });
+    };
 
     const result = generator.getRandom(10);
     expect(result).toEqual(Uint8Array.from([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
