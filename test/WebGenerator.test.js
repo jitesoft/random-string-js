@@ -6,7 +6,6 @@ describe('Tests for web generator.', () => {
   test('Return value is correct type.', () => {
     const result = generator.getRandom(10);
     expect(result).toBeInstanceOf(Uint8Array);
-
   });
 
   test('List contains values between -255 and +255', () => {
@@ -35,14 +34,13 @@ describe('Tests for web generator.', () => {
   });
 
   test('Uses crypt of it exists.', () => {
-    window.crypto = {
-      getRandomValues (array) {
-        array = array.fill(1).values();
+    Object.defineProperty(global, 'crypto', {
+      value: {
+        getRandomValues: (a) => a.fill(1).values()
       }
-    };
+    });
+
     const result = generator.getRandom(10);
     expect(result).toEqual(Uint8Array.from([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
-
   });
 });
-
