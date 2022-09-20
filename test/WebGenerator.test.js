@@ -37,11 +37,13 @@ describe('Tests for web generator.', () => {
   });
 
   test('Uses crypt of it exists.', () => {
-    window.crypto = {
-      getRandomValues (array) {
-        array = array.fill(1).values();
+    Object.defineProperty(window, 'crypto', {
+      value: {
+        getRandomValues (array) {
+          array = array.fill(1).values();
+        }
       }
-    };
+    });
 
     const result = generator.getRandom(10);
     expect(result).toEqual(Uint8Array.from([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));

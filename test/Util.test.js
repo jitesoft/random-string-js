@@ -1,7 +1,6 @@
 import { shuffle } from '../src/Util';
 
 describe('Tests for the shuffle util function.', () => {
-
   test('Shuffle randomizes order in array.', () => {
     const array = ['a', 'b', 'c', 'd', 'e'];
     const shuffled = shuffle(array);

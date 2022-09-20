@@ -42,20 +42,21 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.16.7"
+    "@babel/runtime-corejs3": "^7.19.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/eslint-parser": "^7.16.5",
-    "@jitesoft/babel-preset-main": "^2.16.0",
-    "@jitesoft/eslint-config": "^4.0.0",
-    "babel-jest": "^27.4.6",
-    "babel-loader": "^8.2.3",
-    "core-js": "^3.20.2",
+    "@babel/core": "^7.19.1",
+    "@babel/eslint-parser": "^7.19.1",
+    "@jitesoft/babel-preset-main": "^4.0.1",
+    "@jitesoft/eslint-config": "^4.1.7",
+    "babel-jest": "^29.0.3",
+    "babel-loader": "^8.2.5",
+    "core-js": "^3.25.2",
     "cross-env": "^7.0.3",
-    "eslint": "^8.6.0",
-    "jest": "^27.4.7",
-    "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1"
+    "eslint": "^8.23.1",
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.0.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }
