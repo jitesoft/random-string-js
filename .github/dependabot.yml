@@ -10,3 +10,14 @@ updates:
       - "dependencies"
     reviewers:
       - "johannestegner"
+
+  - package-ecosystem: "npm"
+    allow:
+      - dependency-type: "development"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels: [ "dev-dependencies" ]
+    target-branch: "master"
+    reviewers:
+      - "johannestegner"
